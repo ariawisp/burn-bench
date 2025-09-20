@@ -48,7 +48,7 @@ distributed = ["server", "remote"]
 
 [dependencies]
 # Depend on ariawisp/burn commit containing cubecl upload-path changes
-burn = { git = "https://github.com/ariawisp/burn", default-features = false, rev = "a5e9acb0495abd5271d2a6911df4ccab82780fc5" }
+burn = { git = "https://github.com/ariawisp/burn", default-features = false, rev = "06603115" }
 
 burnbench = { path = "../burnbench" }
 
