@@ -47,8 +47,8 @@ remote = ["burn/remote"]
 distributed = ["server", "remote"]
 
 [dependencies]
-# Use a local checkout of burn for development
-burn = { path = "../../../burn/crates/burn", default-features = false }
+# Depend on ariawisp/burn commit containing cubecl upload-path changes
+burn = { git = "https://github.com/ariawisp/burn", default-features = false, rev = "a5e9acb0495abd5271d2a6911df4ccab82780fc5" }
 
 burnbench = { path = "../burnbench" }
 
