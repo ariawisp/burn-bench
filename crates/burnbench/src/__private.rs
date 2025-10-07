@@ -180,6 +180,14 @@ macro_rules! bench_on_backend {
             $crate::bench_on_backend!($fn_name, Wgpu<$dtype>, device);
         }
 
+        #[cfg(feature = "metal4")]
+        {
+            use burn::backend::Metal4;
+
+            let device = Default::default();
+            $crate::bench_on_backend!($fn_name, Metal4<$dtype>, device);
+        }
+
         #[cfg(feature = "ndarray")]
         {
             use burn::backend::NdArray;
@@ -289,6 +297,8 @@ macro_rules! bench_on_backend {
         let feature_name = "vulkan";
         #[cfg(feature = "vulkan-fusion")]
         let feature_name = "vulkan-fusion";
+        #[cfg(feature = "metal4")]
+        let feature_name = "metal4";
         #[cfg(feature = "metal")]
         let feature_name = "metal";
         #[cfg(feature = "metal-fusion")]

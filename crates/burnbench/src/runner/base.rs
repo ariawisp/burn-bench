@@ -146,6 +146,8 @@ enum BackendValues {
     VulkanFusion,
     #[strum(to_string = "metal")]
     Metal,
+    #[strum(to_string = "metal4")]
+    Metal4,
     #[strum(to_string = "metal-fusion")]
     MetalFusion,
 }

@@ -35,6 +35,7 @@ wgpu-fusion = ["wgpu", "burn/fusion"]
 vulkan = ["burn/vulkan", "burn/autotune"]
 vulkan-fusion = ["vulkan", "burn/fusion"]
 metal = ["burn/metal", "burn/autotune"]
+metal4 = ["burn/metal4", "burn/autotune"]
 metal-fusion = ["metal", "burn/fusion"]
 f32 = []
 f16 = []
@@ -48,7 +49,7 @@ distributed = ["server", "remote"]
 
 [dependencies]
 # Use the last released version to avoid possible breaking changes
-burn = { git = "https://github.com/tracel-ai/burn", default-features = false }
+burn = { path = "../../../burn/crates/burn", default-features = false }
 
 burnbench = { path = "../burnbench" }
 
